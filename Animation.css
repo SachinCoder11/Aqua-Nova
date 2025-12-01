@@ -14,7 +14,7 @@
     position: relative;
 }
 
-/* Fish Container */
+
 .fish-container {
     position: relative;
     height: 100%;
@@ -29,7 +29,7 @@
     transform: translateY(-50%);
 }
 
-/* Bubbles (keep your animations for bubbles only) */
+
 .bubble-container {
     position: absolute;
     height: 100%;
