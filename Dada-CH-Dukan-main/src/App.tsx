@@ -42,6 +42,9 @@ import Blogs from "./components/pages/Blogs";
 import CaseStudies from "./components/pages/CaseStudies";
 import Manuals from "./components/pages/Manuals";
 import Accessories from "./components/pages/Accessories";
+import OfficeAutamation from "./Services/OfficeAutamation";
+import HospitalAutomation from "./Services/HospitalAutomation";
+import HotelAutomation from "./Services/HotelAutomation";
 
 function App() {
   return (
@@ -112,7 +115,12 @@ function App() {
         <Route path="/resources/manuals" element={<Manuals />} />
         <Route path="/resources/accessories" element={<Accessories />} />
         {/* SERVICES */}
-        <Route path="/services/home-automation" element={<HomeAutomation />} />
+        <Route path="/services/home-automation" element={<HomeAutomation/>}></Route>
+        <Route path="/services/office-automation" element={<OfficeAutamation />}> </Route>
+
+<Route path="/services/hospital-automation" element={<HospitalAutomation/>}> </Route>
+<Route path="/services/office-automation" element={<OfficeAutamation />}> </Route>
+<Route path="/services/hotel-automation" element={<HotelAutomation />}> </Route>
       </Routes>
     </Router>
   );

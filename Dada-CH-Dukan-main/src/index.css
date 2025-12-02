@@ -1,10 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Nasalization';
+  src: url('/font/NasalizationRg-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+body {
+  font-family: 'Nasalization', sans-serif;
+}
 
 /* ===================== */
 /*    GLOW BORDER        */
 /* ===================== */
+
+
+
 
 @keyframes glow-move {
   0% {

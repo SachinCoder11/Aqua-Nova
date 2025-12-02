@@ -13,9 +13,9 @@ const Footer = () => {
           {/* BRAND */}
           <div>
             <img
-              src="/src/images/new logo2.png"
+              src="/images/new logo2.png"
               alt="Smart Life Solutions"
-              className="w-40 mb-6"
+              className="w-10 mb-6"
             />
 
             <div className="flex space-x-4 mb-6">
@@ -31,8 +31,8 @@ const Footer = () => {
             </div>
 
             <div className="flex space-x-3">
-              <img src="/src/images/new logo2.png" className="h-10" />
-              <img src="/app-store.png" className="h-10" />
+              {/* <img src="/src/images/new logo2.png" className="h-10" />
+              <img src="/app-store.png" className="h-10" /> */}
             </div>
           </div>
 
@@ -65,11 +65,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
 
             <ul className="space-y-4 text-sm">
-              <li>
-                A-09-02-B, Kamdhenu Estate,<br />
-                Opp. Gorwa Water Tank, Gorwa,<br />
-                Vadodara, India - 390016
-              </li>
+              
 
               <li className="flex items-center space-x-2">
                 <span>📧</span>
