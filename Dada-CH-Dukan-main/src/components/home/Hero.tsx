@@ -10,8 +10,7 @@ type Slide = {
   subtitle: string;
 };
 
-
- const slides: Slide[] = [
+const slides: Slide[] = [
   {
     id: "v1",
     type: "video",
@@ -36,14 +35,11 @@ type Slide = {
   {
     id: "u2",
     type: "image",
-    src: "/images/Indoor/Celling.png",   // adjust based on your actual folder
+    src: "/images/Indoor/Celling.png",
     title: "Crafting The Perfect Atmosphere",
     subtitle: "Smarter illumination for modern living spaces."
   }
 ];
-
-
-
 
 const AUTO = 6000;
 
@@ -68,7 +64,8 @@ const Hero: React.FC = () => {
   }
 
   const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () =>
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
@@ -99,43 +96,55 @@ const Hero: React.FC = () => {
         </div>
       ))}
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 " />
-
       {/* TEXT */}
-      <div className="absolute inset-0 z-30 flex items-center px-10 md:px-24">
+      <div className="absolute inset-0 z-30 flex items-center px-8 md:px-24">
         <div className="max-w-3xl">
-          <h3 className="text-white/70 mb-3 tracking-wide">Convenience Assured With</h3>
 
+          <h3 className="text-white/70 mb-3 tracking-wide text-sm md:text-base">
+            Convenience Assured With
+          </h3>
+
+          {/* TITLE WITH GRADIENT TEXT */}
           <h1
             key={slides[index].title}
-            className="text-white font-bold text-4xl md:text-6xl mb-4 transition-all duration-700"
+            className="
+              font-bold 
+              text-3xl md:text-6xl 
+              mb-4 leading-tight
+              bg-gradient-to-r from-orange-500 to-yellow-300 
+              bg-clip-text text-transparent
+            "
           >
             {slides[index].title}
           </h1>
 
+          {/* SUBTITLE WITH GRADIENT TEXT */}
           <p
             key={slides[index].subtitle}
-            className="text-white/80 text-lg md:text-xl max-w-xl mb-8 transition-all duration-700"
+            className="
+              text-base md:text-xl max-w-xl mb-8
+              bg-gradient-to-r from-orange-400 to-orange-200 
+              bg-clip-text text-transparent
+            "
           >
             {slides[index].subtitle}
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/contact">
-              <button className="px-6 py-3 bg-white text-black rounded-full font-semibold shadow-md">
+              <button className="px-6 py-3 bg-white text-black rounded-full font-semibold shadow-md w-full sm:w-auto">
                 Contact Us
               </button>
             </Link>
 
-            <button className="px-6 py-3 border border-white/40 text-white rounded-full flex items-center gap-2 backdrop-blur-md">
+            <button className="px-6 py-3 border border-white/40 text-white rounded-full flex items-center gap-2 backdrop-blur-md w-full sm:w-auto">
               <Play size={18} /> Watch Demo
             </button>
           </div>
         </div>
       </div>
 
-      {/* LEFT ARROW — hidden on mobile */}
+      {/* LEFT ARROW */}
       <button
         onClick={prevSlide}
         className="
@@ -150,7 +159,7 @@ const Hero: React.FC = () => {
         </svg>
       </button>
 
-      {/* RIGHT ARROW — hidden on mobile */}
+      {/* RIGHT ARROW */}
       <button
         onClick={nextSlide}
         className="

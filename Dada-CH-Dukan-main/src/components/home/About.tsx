@@ -24,8 +24,7 @@ const About = () => {
           {/* TEXT */}
           <div className="flex-1 space-y-5">
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-              Smart Automation{" "}
-              <span className="text-orange-400"> Made Invisible.</span>
+              Smart Automation <span className="text-orange-400">Made Invisible.</span>
             </h2>
 
             <p className="text-gray-300 text-sm leading-relaxed max-w-md">
@@ -55,9 +54,7 @@ const About = () => {
                 muted
                 loop
                 preload="auto"
-                // poster="/vidhero/fallback.jpg" // optional poster
               >
-                {/* Fallback text */}
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -72,10 +69,29 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="border border-gray-200 rounded-xl p-8 hover:border-black transition bg-white"
+              className="
+                rounded-2xl p-8 transition
+                bg-white
+                border border-gray-200/60
+                shadow-[0_4px_20px_rgba(0,0,0,0.04)]
+                hover:shadow-[0_8px_28px_rgba(0,0,0,0.08)]
+                hover:-translate-y-1
+                hover:border-gray-300
+              "
             >
-              <div className="w-12 h-12 rounded-lg bg-orange-500 text-white flex items-center justify-center mb-4">
-                <f.icon size={22} />
+
+              {/* ICON – ELEGANT, NOT FLASHY */}
+              <div
+                className="
+                  w-14 h-14 rounded-xl
+                  bg-gradient-to-br from-orange-500 to-orange-600
+                  text-white flex items-center justify-center
+                  shadow-md shadow-orange-500/25
+                  ring-1 ring-orange-300/30
+                  mb-5
+                "
+              >
+                <f.icon size={26} strokeWidth={1.6} />
               </div>
 
               <h4 className="text-lg font-semibold text-black mb-2">{f.title}</h4>
