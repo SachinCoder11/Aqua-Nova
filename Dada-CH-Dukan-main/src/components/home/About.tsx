@@ -49,7 +49,7 @@ const About = () => {
             <div className="relative w-full rounded-xl overflow-hidden shadow-md bg-black">
               <video
                 className="w-full h-full max-h-80 object-cover"
-                src="/vidhero/video3 .mp4"
+                src="/videos/Light/autovid.mp4"
                 playsInline
                 autoPlay
                 muted

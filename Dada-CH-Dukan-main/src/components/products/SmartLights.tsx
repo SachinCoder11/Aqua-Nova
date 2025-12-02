@@ -27,7 +27,7 @@ const SmartLights: React.FC = () => {
       title: "Premium RGB / RGBW Controllers",
       desc:
         "Advanced ambient lighting controllers with precision color control, automation, and scene customization.",
-      img: "/src/images/Light Photo/light1.jpeg",
+      img: "/images/Light Photo/light1.jpeg",
       features: [
         "RGB / RGBW / CCT Smart Control",
         "Mobile App + Touch Panel Support",
@@ -40,7 +40,7 @@ const SmartLights: React.FC = () => {
       title: "Smooth Zero-Flicker Dimming",
       desc:
         "Advanced dimming modules designed for modern LED lighting, perfect for ambience and task lighting.",
-      img: "/src/images/Light Photo/dimmer.png",
+      img: "/images/Light Photo/dimmer.png",
       features: [
         "Zero-Flicker Dim Technology",
         "Compatible With All LED & COB Lights",
@@ -53,7 +53,7 @@ const SmartLights: React.FC = () => {
       title: "Architectural Linear Lighting",
       desc:
         "Customizable profile lighting built for walls, ceilings, halls, and modern interior design patterns.",
-      img: "/src/images/Light Photo/Profilepatti.jpg",
+      img: "/images/Light Photo/Profilepatti.jpg",
       features: [
         "Premium Slimline Design",
         "Unlimited Layout Customization",
@@ -66,7 +66,7 @@ const SmartLights: React.FC = () => {
       title: "Modular Magnetic Spotlights",
       desc:
         "Effortlessly repositionable lighting system perfect for galleries, studios, and elegant living spaces.",
-      img: "/src/images/Light Photo/Magnetlight.jpg",
+      img: "/images/Light Photo/Magnetlight.jpg",
       features: [
         "Fully Modular Magnetic Track System",
         "Focused + Ambient Lighting Options",
@@ -79,7 +79,7 @@ const SmartLights: React.FC = () => {
       title: "High-Performance Ambient Lights",
       desc:
         "Powerful, efficient, and aesthetically clean architectural lights made for everyday use.",
-      img: "/src/images/Light Photo/Normalight.jpg",
+      img: "/images/Light Photo/Normalight.jpg",
       features: [
         "Bright & Efficient Illumination",
         "Perfect for Daily Usage",
@@ -93,7 +93,7 @@ const SmartLights: React.FC = () => {
       {/* HERO */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <video
-          src="/src/Videos/Light/Dada Chi Light.mp4"
+          src="/public/videos/Light/Dada Chi Light.mp4"
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop

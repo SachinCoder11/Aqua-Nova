@@ -5,17 +5,17 @@ const SmartDoorlocks: React.FC = () => {
     {
       title: "Fingerprint Door Lock",
       text: "Fast biometric unlocking with 360° recognition and premium metal finish.",
-      img: "/src/images/Doorlock/people-interacting-with-ai-their-daily-lives.jpg",
+      img: "/images/Doorlock/people-interacting-with-ai-their-daily-lives.jpg",
     },
     {
       title: "Video Smart Lock",
       text: "Built-in HD camera, two-way voice, live visitor view, and app unlock.",
-      img: "/src/images/Doorlock/smart-lock-with-digital-interface-futuristic-design.jpg",
+      img: "/images/Doorlock/smart-lock-with-digital-interface-futuristic-design.jpg",
     },
     {
       title: "Rim Smart Lock",
       text: "Compact and secure. Supports PIN, RFID, NFC, OTP, and mobile app access.",
-      img: "/src/images/Doorlock/drlk1.jpeg",
+      img: "/Public/images/Doorlock/drlk1.jpeg",
     },
   ];
 
@@ -32,7 +32,7 @@ const SmartDoorlocks: React.FC = () => {
 
   {/* Video */}
   <video
-    src="/src/videos/Gate/doorlock.webm"
+    src="/images/Gate/stock-footage-opening-automatic-property-gate-with-remote-controller.webm"
     className="absolute inset-0 w-full h-full object-cover"
     autoPlay
     loop
@@ -108,7 +108,7 @@ const SmartDoorlocks: React.FC = () => {
 
           {/* Image */}
           <img
-            src="/src/images/Doorlock/drlk1.jpeg"
+            src="/images/Doorlock/drlk1.jpeg"
             className="w-full rounded-3xl shadow-xl object-cover"
           />
 
@@ -136,7 +136,7 @@ const SmartDoorlocks: React.FC = () => {
       {/* ========================================================== */}
       <section className="relative py-28">
         <img
-          src="/src/images/Doorlock/drlk2.jpg"
+          src="/images/Doorlock/drlk2.jpg"
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-black/40"></div>

@@ -11,7 +11,7 @@ const Profile = () => {
       ======================================= */}
       <section className="relative h-[75vh] w-full flex items-center justify-center overflow-hidden bg-black">
         <img
-          src="/src/images/Light Photo/profilehero.png"
+          src="/images/Light Photo/profilehero.png"
           className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
 
@@ -67,7 +67,7 @@ const Profile = () => {
           <div className="flex justify-center">
             <div className="w-full max-w-md aspect-square bg-gray-200 rounded-xl flex items-center justify-center shadow-lg border border-gray-300">
               <img
-                src="/src/images/Light Photo/herokenechewaliimage.png"
+                src="/images/Light Photo/herokenechewaliimage.png"
                 alt="Profile Lighting"
                 className="w-full h-full object-cover rounded-xl"
               />
@@ -96,17 +96,17 @@ const Profile = () => {
             {[
               {
                 name: "Surface Profile Lights",
-                img: "/src/images/Light Photo/surface.png",
+                img: "/images/Light Photo/surface.png",
                 desc: "Perfect for direct installation on ceilings and walls."
               },
               {
                 name: "Recessed Profile Lights",
-                img: "/src/images/Light Photo/profile 2.png",
+                img: "/images/Light Photo/profile 2.png",
                 desc: "Sleek embedded lighting used in false ceilings."
               },
               {
                 name: "Magnetic Profile Track",
-                img: "/src/images/Light Photo/profile3.png",
+                img: "/images/Light Photo/profile3.png",
                 desc: "Modular and adjustable lighting for premium interiors."
               }
             ].map((item, idx) => (

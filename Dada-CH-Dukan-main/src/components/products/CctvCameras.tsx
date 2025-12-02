@@ -31,7 +31,7 @@ const CctvCameras: React.FC = () => {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
 
         <video
-          src="/src/Videos/CCtv/CCtv1.webm"
+          src="/videos/CCtv/CCtv1.webm"
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay muted loop playsInline
         />
@@ -135,7 +135,7 @@ const CctvCameras: React.FC = () => {
             <div className="absolute -inset-4 bg-gradient-to-br from-orange-200/20 to-yellow-300/20 blur-2xl rounded-3xl opacity-0 group-hover:opacity-100 transition"></div>
 
             <img
-              src="/src/images/CCTV/cctv2.jpg"
+              src="/images/CCTV/cctv2.jpg"
               className="relative rounded-3xl shadow-2xl w-full h-[450px] object-cover"
             />
           </motion.div>
@@ -193,17 +193,17 @@ const CctvCameras: React.FC = () => {
           {[
             {
               title: "Indoor Dome Camera",
-              img: "/src/images/CCTV/surveillance-camera-built-into-stone-wall-building.jpg",
+              img: "/images/CCTV/surveillance-camera-built-into-stone-wall-building.jpg",
               desc: "Smart panoramic indoor coverage."
             },
             {
               title: "Outdoor Bullet Camera",
-              img: "/src/images/CCTV/view-round-modern-webcam-with-copy-space.jpg",
+              img: "/images/CCTV/view-round-modern-webcam-with-copy-space.jpg",
               desc: "Long-range outdoor protection."
             },
             {
               title: "360° PTZ Camera",
-              img: "/src/images/CCTV/Untitled.jpg",
+              img: "/images/CCTV/Untitled.jpg",
               desc: "Full movement with zoom & tracking."
             }
           ].map((card, i) => (

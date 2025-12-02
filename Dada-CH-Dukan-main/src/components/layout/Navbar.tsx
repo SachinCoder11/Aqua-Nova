@@ -110,7 +110,7 @@ const Navbar = () => {
           {/* LOGO */}
           <Link to="/" className="flex items-center space-x-3" onClick={closeMobile}>
             <img
-              src="/src/images/new logo2.png"
+              src="/images/new logo2.png"
               alt="Smart Life Logo"
               className="h-10 w-auto object-contain"
             />

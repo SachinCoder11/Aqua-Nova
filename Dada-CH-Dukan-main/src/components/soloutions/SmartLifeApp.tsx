@@ -101,7 +101,7 @@ const SmartLifeApp = () => {
       {/* PREVIEW SECTION */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-14">
         <img
-          src="/src/images/Light Photo/Apppreview.png"
+          src="/images/Light Photo/Apppreview.png"
           className="rounded-2xl shadow-xl"
         />
 

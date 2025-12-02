@@ -22,7 +22,7 @@ const Indoor = () => {
       ====================================================== */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/src/images/Indoor/Hero.png"
+          src="/images/Indoor/Hero.png"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
@@ -64,7 +64,7 @@ const Indoor = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-md aspect-square rounded-2xl border shadow-xl overflow-hidden">
             <img
-              src="/src/images/Indoor/Herokenechey.png"
+              src="/images/Indoor/Herokenechey.png"
               className="w-full h-full object-cover"
             />
           </div>
@@ -91,7 +91,7 @@ const Indoor = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Indoor/Celling.png"
+                src="/images/Indoor/Celling.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -106,7 +106,7 @@ const Indoor = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Indoor/Srip.png"
+                src="/images/Indoor/Srip.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -121,7 +121,7 @@ const Indoor = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Indoor/cob.png"
+                src="/images/Indoor/cob.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>

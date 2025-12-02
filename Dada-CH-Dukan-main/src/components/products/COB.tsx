@@ -16,17 +16,17 @@ export const COB: React.FC = () => {
     {
       title: "Fixed COB Lights",
       desc: "Standard COB lights with a focused, powerful beam for clean downward illumination.",
-      image: "/src/images/Light Photo/1.png",
+      image: "/images/Light Photo/1.png",
     },
     {
       title: "Adjustable / Tiltable COB",
       desc: "Provides directional lighting ideal for highlighting walls, decor, or focus objects.",
-      image: "/src/images/Light Photo/2.png",
+      image: "/images/Light Photo/2.png",
     },
     {
       title: "Deep Recessed COB",
       desc: "Reduces glare while offering a soft, premium lighting output used in luxury interiors.",
-      image: "/src/images/Light Photo/3.jpg",
+      image: "/images/Light Photo/3.jpg",
     },
     {
       title: "Anti-Glare COB",
@@ -76,7 +76,7 @@ export const COB: React.FC = () => {
       ========================================================= */}
       <section className="relative h-[70vh] w-full flex items-center justify-center bg-black overflow-hidden">
         <img
-          src="/src/images/Light Photo/ChatGPT Image Nov 30, 2025, 08_56_12 PM.png"
+          src="/images/Light Photo/ChatGPT Image Nov 30, 2025, 08_56_12 PM.png"
           className="absolute inset-0 w-full h-full object-cover opacity-40"
         />
 

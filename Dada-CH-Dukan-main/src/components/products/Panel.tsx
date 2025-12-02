@@ -22,7 +22,7 @@ const Panel = () => {
       ======================================= */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/src/images/Panel/Herodaphoto.png"
+          src="/Public/images/Panel/Herodaphoto.png"
           className="absolute inset-0 w-full h-full object-cover "
         />
 
@@ -65,7 +65,7 @@ const Panel = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-xl border border-gray-200">
             <img
-              src="/src/images/Panel/pro.png"
+              src="/Public/images/Panel/pro.png"
               className="w-full h-full object-cover"
             />
           </div>
@@ -90,7 +90,7 @@ const Panel = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Panel/sqr.png"
+                src="/Public/images/Panel/sqr.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -105,7 +105,7 @@ const Panel = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Panel/circle.png"
+                src="/Public/images/Panel/circle.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -120,7 +120,7 @@ const Panel = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Panel/office.png"
+                src="/Public/images/Panel/office.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>

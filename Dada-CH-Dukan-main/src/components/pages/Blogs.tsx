@@ -90,7 +90,7 @@ const Blogs = () => {
             </p>
 
             <div className="flex items-center gap-3 mt-6">
-              <img src="/src/images/new logo2.png" className="w-8" />
+              <img src="/images/new logo2.png" className="w-8" />
               <p className="text-gray-800 font-medium">
                 Time to upgrade your home to a smarter, connected space.
               </p>

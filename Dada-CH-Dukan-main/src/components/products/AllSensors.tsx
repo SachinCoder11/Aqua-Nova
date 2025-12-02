@@ -10,7 +10,7 @@ const AllSensors: React.FC = () => {
   const sections = [
     {
       title: "Single Phase Control Panel",
-      img: "/src/images/Sensor/Sensor1.jpg",
+   img:" /images/Sensor/Sensor1.jpg",
       features: [
         "Voltage: 230V/50Hz | Capacity: 1–24A",
         "High/Low voltage protection",
@@ -23,7 +23,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Digital Water Level Controller",
-      img: "/src/images/Sensor/sensor2.jpg",
+      img: "/images/Sensor/sensor2.jpg",
       features: [
         "Input: 230V AC | Output: 230V",
         "High/Low voltage protection",
@@ -36,7 +36,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Step Sensor Controller",
-      img: "/src/images/Sensor/sensor3.jpg",
+      img: "/images/Sensor/sensor3.jpg",
       features: [
         "Controls up to 32 stair lights",
         "Adjustable 4-speed lighting levels",
@@ -47,7 +47,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Wardrobe Sensor (Double/Single Door)",
-      img: "/src/images/Sensor/sensor4.jpg",
+      img: "/images/Sensor/sensor4.jpg",
       features: [
         "Wider opening space support",
         "Elegant & grand appearance",
@@ -57,7 +57,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Microwave Motion Sensor",
-      img: "/src/images/Sensor/s5.jpg",
+      img: "/images/Sensor/s5.jpg",
       features: [
         "5.8GHz microwave detection",
         "360° coverage up to 10m",
@@ -68,7 +68,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Step Sensor",
-      img: "/src/images/Sensor/S7.jpg",
+      img: "/images/Sensor/S7.jpg",
       features: [
         "LUX adjustable",
         "Auto ON at <5 LUX",
@@ -79,7 +79,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Wall-Drop Microwave Sensor",
-      img: "/src/images/Sensor/s9.png",
+      img: "/images/Sensor/s9.png",
       features: [
         "High-precision dry-contact sensor",
         "360° detection | 2–10m range",
@@ -89,7 +89,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Hidden Microwave Sensor",
-      img: "/src/images/Sensor/S10.jpg",
+      img: "/images/Sensor/S10.jpg",
       features: [
         "360° detection | up to 16m",
         "Adjustable sensitivity & delay",
@@ -99,7 +99,7 @@ const AllSensors: React.FC = () => {
     },
     {
       title: "Surface Motion Sensor",
-      img: "/src/images/Sensor/S11.jpg",
+      img: "/images/Sensor/S11.jpg",
       features: [
         "Smart 5.8GHz sensing",
         "Energy-saving control",
@@ -115,7 +115,7 @@ const AllSensors: React.FC = () => {
       {/* HERO */}
       <section className="relative h-[75vh] flex items-center justify-center">
       <video
-    src="/src/videos/Sensor/svid.webm"
+    src="/videos/Sensor/svid.webm"
     className="absolute inset-0 w-full h-full object-cover"
     autoPlay
     loop

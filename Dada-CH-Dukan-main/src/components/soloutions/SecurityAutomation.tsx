@@ -9,7 +9,7 @@ const SecurityAutomation = () => {
       {/* HERO */}
       <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/src/images/Security/hero.png"
+          src="/images/Security/hero.png"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30 "></div>
@@ -57,7 +57,7 @@ const SecurityAutomation = () => {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           
           <img
-            src="/src/images/Security/Security.png"
+            src="/images/Security/Security.png"
             className="rounded-xl shadow-xl"
           />
 

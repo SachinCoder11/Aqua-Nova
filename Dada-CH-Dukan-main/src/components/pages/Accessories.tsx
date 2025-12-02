@@ -14,7 +14,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 // FIXED PDF PATH (VITE PUBLIC FOLDER)
 // Move your file to: public/Pdf/dope.pdf
 // ------------------------------
-const SamplePDF = "/src/Pdf/dope.pdf";
+const SamplePDF = "/Pdf/dope.pdf";
 
 const Accessories: React.FC = () => {
   const pdfFiles = [

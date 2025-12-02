@@ -36,9 +36,9 @@ const LightingAutomation: React.FC = () => {
   };
 
   const deviceImages = [
-    "/src/images/Light Photo/smartswitch.png",
-    "/src/images/Light Photo/remote.png",
-    "/src/images/Light Photo/dlai.png",
+    "/images/Light Photo/smartswitch.png",
+    "/images/Light Photo/remote.png",
+    "/images/Light Photo/dlai.png",
   ];
 
   return (
@@ -51,7 +51,7 @@ const LightingAutomation: React.FC = () => {
         <div className="relative w-full max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-xl aspect-[16/9]">
 
           <video
-            src="/src/Videos/Light/lightaotimation.webm"
+            src="/Public/Videos/Light/lightaotimation.webm"
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             loop
@@ -63,7 +63,7 @@ const LightingAutomation: React.FC = () => {
 
           <div className="relative z-10 text-center px-6 max-w-3xl mx-auto top-1/4">
             <img
-              src="/src/images/new logo2.png"
+              src="/Public/images/new logo2.png"
               alt="icon"
               className="w-16 mx-auto mb-4 opacity-90"
             />
@@ -90,7 +90,7 @@ const LightingAutomation: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
         <div className="animate-slideUp">
           <span className="flex items-center gap-2 text-orange-500 font-medium">
-            <img src="/src/images/new logo2.png" className="w-5" />
+            <img src="/images/new logo2.png" className="w-5" />
             Smarter Lighting
           </span>
 
@@ -116,7 +116,7 @@ const LightingAutomation: React.FC = () => {
 
         <div className="w-full">
           <video
-            src="/src/images/Light Photo/lightvid.mp4"
+            src="/images/Light Photo/lightvid.mp4"
             className="w-full h-[350px] rounded-3xl object-cover shadow-lg"
             autoPlay
             loop

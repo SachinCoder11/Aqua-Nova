@@ -21,7 +21,7 @@ const Outdoor = () => {
       ====================================================== */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/src/images/Outdoor/Hero.png"
+          src="/images/Outdoor/Hero.png"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/25" />
@@ -61,7 +61,7 @@ const Outdoor = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-md aspect-square rounded-2xl shadow-xl border overflow-hidden">
             <img
-              src="/src/images/Outdoor/heroke nechay.png"
+              src="/images/Outdoor/heroke nechay.png"
               className="w-full h-full object-cover"
             />
           </div>
@@ -89,7 +89,7 @@ const Outdoor = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Outdoor/SPike.png"
+                src="/images/Outdoor/SPike.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -103,7 +103,7 @@ const Outdoor = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Outdoor/Wallwasher.png"
+                src="/images/Outdoor/Wallwasher.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -117,7 +117,7 @@ const Outdoor = () => {
           <div className="bg-white rounded-3xl shadow-md border hover:shadow-xl transition p-5">
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="/src/images/Outdoor/FASCADE.png"
+                src="/images/Outdoor/FASCADE.png"
                 className="w-full h-[300px] object-cover"
               />
             </div>

@@ -80,7 +80,7 @@ const AudioVideoSection: React.FC = () => {
 
             {/* STATIC IMAGE (kept EXACT path) */}
             <img
-              src="/src/images/Audio/ChatGPT Image Dec 1, 2025, 01_38_10 AM.png"
+              src="/images/Audio/ChatGPT Image Dec 1, 2025, 01_38_10 AM.png"
               alt="Audio Video Automation"
               className="w-full h-full object-cover"
             />
@@ -130,7 +130,7 @@ const AudioVideoSection: React.FC = () => {
           </p>
 
           <img
-            src="/src/images/Audio/IR-Emitter.png.png"
+            src="/images/Audio/IR-Emitter.png.png"
             className="w-64 mx-auto mt-10"
           />
 
@@ -151,7 +151,7 @@ const AudioVideoSection: React.FC = () => {
           </p>
 
           <img
-            src="/src/images/Audio/IR-Blaster.png.png"
+            src="/images/Audio/IR-Blaster.png.png"
             className="w-64 mx-auto mt-10"
           />
 
