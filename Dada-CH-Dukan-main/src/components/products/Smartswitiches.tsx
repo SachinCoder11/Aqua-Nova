@@ -55,84 +55,156 @@ const SmartSwitches = () => {
       : categories.filter((c) => c.id === selected);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 pb-20">
+    <div className="w-full bg-white text-gray-900">
 
-      {/* TITLE */}
-      <motion.div
-        {...fadeUp}
-        className="text-center max-w-3xl mx-auto mb-12"
-      >
-        <h2 className="text-4xl font-bold">
-          Explore Our <span className="text-orange-600">Smart Switch Range</span>
-        </h2>
-        <p className="text-gray-600 mt-3">
-          One unified catalogue. Multiple switch categories designed for modern homes,
-          hotels, commercial spaces and luxury interiors.
-        </p>
-      </motion.div>
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full h-[80vh] flex items-center justify-center">
+        <img
+          src="/Products/switch-hero.jpg"
+          alt="Smart Switch Automation"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* PDF CATALOGUE BUTTON */}
-      <div className="flex justify-center mb-12">
-        <a
-          href="/catalogues/smart-switches.pdf"
-          target="_blank"
-          className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-xl shadow hover:bg-orange-700 transition"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative text-center text-white px-6"
         >
-          Download Full Switch Catalogue
-        </a>
-      </div>
+          <h1 className="text-4xl md:text-5xl font-bold drop-shadow-xl">
+            Upgrade Your Space With
+          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mt-3">
+            <span className="text-orange-500">Smart Switch Automation</span>
+          </h1>
+        </motion.div>
+      </section>
 
-      {/* FILTER BUTTONS */}
-      <div className="flex flex-wrap justify-center gap-3 mb-10">
-        <button
-          onClick={() => setSelected("all")}
-          className={`px-5 py-2 rounded-full border text-sm ${
-            selected === "all"
-              ? "bg-orange-600 text-white border-orange-600"
-              : "border-gray-300 text-gray-700"
-          }`}
+      {/* ================= INTRO SECTION ================= */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            A New Standard in{" "}
+            <span className="text-orange-600">Modern Switching</span>
+          </h2>
+
+          <p className="text-gray-600 mt-5 text-lg">
+            From touch panels to KNX automation, smart switches bring elegance,
+            convenience and control to homes, hotels and corporate spaces.
+            Built for reliability, aesthetics and seamless integration.
+          </p>
+        </motion.div>
+
+        {/* BULLET POINT GRID WITH IMAGES */}
+        <div className="mt-14 grid md:grid-cols-3 gap-8">
+          {[
+            {
+              label: "Elegant Design",
+              img: "/icons/design.png",
+            },
+            {
+              label: "Seamless Integration",
+              img: "/icons/integration.png",
+            },
+            {
+              label: "Future-Proof Tech",
+              img: "/icons/technology.png",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              {...fadeUp}
+              className="p-6 rounded-xl border bg-white shadow hover:shadow-lg transition"
+            >
+              <img src={item.img} className="w-12 h-12 mx-auto mb-4" />
+              <p className="font-semibold text-lg text-gray-800 text-center">
+                {item.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= SWITCH CATALOGUE SECTION ================= */}
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+
+        {/* TITLE */}
+        <motion.div
+          {...fadeUp}
+          className="text-center max-w-3xl mx-auto mb-12"
         >
-          All
-        </button>
+          <h2 className="text-4xl font-bold">
+            Explore Our{" "}
+            <span className="text-orange-600">Smart Switch Range</span>
+          </h2>
+          <p className="text-gray-600 mt-3">
+            One unified catalogue. Multiple switch categories for homes, hotels,
+            offices and premium interiors.
+          </p>
+        </motion.div>
 
-        {categories.map((cat) => (
+        {/* PDF BUTTON */}
+        <div className="flex justify-center mb-12">
+          <a
+            href="/catalogues/smart-switches.pdf"
+            target="_blank"
+            className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-xl shadow hover:bg-orange-700 transition"
+          >
+            Download Full Switch Catalogue
+          </a>
+        </div>
+
+        {/* FILTER BUTTONS */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
           <button
-            key={cat.id}
-            onClick={() => setSelected(cat.id)}
+            onClick={() => setSelected("all")}
             className={`px-5 py-2 rounded-full border text-sm ${
-              selected === cat.id
+              selected === "all"
                 ? "bg-orange-600 text-white border-orange-600"
                 : "border-gray-300 text-gray-700"
             }`}
           >
-            {cat.name}
+            All
           </button>
-        ))}
-      </div>
 
-      {/* CATEGORY GRID */}
-      <div className="grid md:grid-cols-3 gap-10">
-        {filtered.map((item, i) => (
-          <motion.div
-            key={i}
-            {...fadeUp}
-            className="bg-white rounded-2xl border shadow hover:-translate-y-2 transition-all p-4"
-          >
-            <img
-              src={item.img}
-              className="w-full h-[220px] object-cover rounded-xl"
-              alt={item.name}
-            />
-            <h3 className="text-xl font-semibold mt-4">{item.name}</h3>
-            <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
-          </motion.div>
-        ))}
-      </div>
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setSelected(cat.id)}
+              className={`px-5 py-2 rounded-full border text-sm ${
+                selected === cat.id
+                  ? "bg-orange-600 text-white border-orange-600"
+                  : "border-gray-300 text-gray-700"
+              }`}
+            >
+              {cat.name}
+            </button>
+          ))}
+        </div>
 
-    </section>
+        {/* CATEGORY GRID */}
+        <div className="grid md:grid-cols-3 gap-10">
+          {filtered.map((item, i) => (
+            <motion.div
+              key={i}
+              {...fadeUp}
+              className="bg-white rounded-2xl border shadow hover:-translate-y-2 transition-all p-4"
+            >
+              <img
+                src={item.img}
+                className="w-full h-[220px] object-cover rounded-xl"
+                alt={item.name}
+              />
+              <h3 className="text-xl font-semibold mt-4">{item.name}</h3>
+              <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+      </section>
+    </div>
   );
 };
-
-
 
 export default SmartSwitches;
