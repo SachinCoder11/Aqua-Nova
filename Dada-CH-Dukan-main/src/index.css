@@ -3,7 +3,7 @@
 @tailwind utilities;
 @font-face {
   font-family: 'Nasalization';
-  src: url('/font/NasalizationRg-Regular.ttf') format('truetype');
+  src: url('/font/Nasalization\ Rg.otf') format('truetype');
   font-display: swap;
 }
 

@@ -45,6 +45,7 @@ import Accessories from "./components/pages/Accessories";
 import OfficeAutamation from "./Services/OfficeAutamation";
 import HospitalAutomation from "./Services/HospitalAutomation";
 import HotelAutomation from "./Services/HotelAutomation";
+import SmartSwitches from "./components/products/Smartswitiches";
 
 function App() {
   return (
@@ -75,7 +76,7 @@ function App() {
         <Route path="/products/cctv-cameras" element={<CctvCameras />} />
         <Route path="/products/smart-doorlocks" element={<SmartDoorlocks />} />
         <Route path="/products/all-sensors" element={<AllSensors />} />
-
+  <Route path="/products/smart-switches" element={<SmartSwitches/>} />
         {/* LIGHTING AUTOMATION */}
         <Route
           path="/products/lighting-automation"

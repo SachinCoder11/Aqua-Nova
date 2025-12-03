@@ -2,40 +2,28 @@ import React, { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
 
-type Slide = {
-  id: string;
-  type: "image" | "video";
-  src: string;
-  title: string;
-  subtitle: string;
-};
-
-const slides: Slide[] = [
+const slides = [
   {
-    id: "v1",
-    type: "video",
-    src: "/videos/Light/Dada Chi Light.mp4",
+    id: "i1",
+    src: "/Hero/h5.png",
     title: "Lighting That Thinks With You",
     subtitle: "Create the perfect mood in every corner of your home."
   },
   {
-    id: "v2",
-    type: "video",
-    src:"/videos/Light/lightaotimation.webm",
+    id: "i2",
+    src: "/Hero/h2.jpg",
     title: "Live Smarter, Feel Better",
     subtitle: "Effortless control. Beautiful ambiance. Everyday comfort."
   },
   {
-    id: "u1",
-    type: "video",
-    src: "/videos/Sensor/svid.webm",
+    id: "i3",
+    src: "/Hero/h6.png",
     title: "Where Comfort Meets Intelligence",
     subtitle: "Lighting that adapts to your lifestyle automatically."
   },
   {
-    id: "u2",
-    type: "image",
-    src: "/images/Indoor/Celling.png",
+    id: "i4",
+    src: "/Hero/h7.png",
     title: "Crafting The Perfect Atmosphere",
     subtitle: "Smarter illumination for modern living spaces."
   }
@@ -52,48 +40,32 @@ const Hero: React.FC = () => {
     return stopTimer;
   }, [index]);
 
-  function startTimer() {
+  const startTimer = () => {
     stopTimer();
     timer.current = window.setTimeout(() => {
       nextSlide();
     }, AUTO);
-  }
+  };
 
-  function stopTimer() {
+  const stopTimer = () => {
     if (timer.current) clearTimeout(timer.current);
-  }
+  };
 
   const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
-  const prevSlide = () =>
-    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
 
       {/* SLIDES */}
       {slides.map((slide, i) => (
-        <div
+        <img
           key={slide.id}
-          className="absolute inset-0 transition-opacity duration-[1200ms]"
+          src={slide.src}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms]"
           style={{ opacity: index === i ? 1 : 0 }}
-        >
-          {slide.type === "image" ? (
-            <img
-              src={slide.src}
-              className="w-full h-full object-cover"
-              draggable="false"
-            />
-          ) : (
-            <video
-              src={slide.src}
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          )}
-        </div>
+          draggable="false"
+        />
       ))}
 
       {/* TEXT */}
@@ -104,7 +76,6 @@ const Hero: React.FC = () => {
             Convenience Assured With
           </h3>
 
-          {/* TITLE WITH GRADIENT TEXT */}
           <h1
             key={slides[index].title}
             className="
@@ -118,7 +89,6 @@ const Hero: React.FC = () => {
             {slides[index].title}
           </h1>
 
-          {/* SUBTITLE WITH GRADIENT TEXT */}
           <p
             key={slides[index].subtitle}
             className="
@@ -180,9 +150,7 @@ const Hero: React.FC = () => {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full ${
-              index === i ? "bg-white" : "bg-white/40"
-            }`}
+            className={`w-3 h-3 rounded-full ${index === i ? "bg-white" : "bg-white/40"}`}
           />
         ))}
       </div>

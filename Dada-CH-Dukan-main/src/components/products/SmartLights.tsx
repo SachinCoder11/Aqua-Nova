@@ -93,7 +93,7 @@ const SmartLights: React.FC = () => {
       {/* HERO */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <video
-          src="/public/videos/Light/Dada Chi Light.mp4"
+          src="/videos/Light/Dada Chi Light.mp4"
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop

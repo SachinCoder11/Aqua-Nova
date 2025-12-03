@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Children } from "react";
 import { Menu, X, Phone, FileText, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -48,7 +48,7 @@ const Navbar = () => {
     { name: "Home Automation", path: "/services/home-automation" },
     { name: "Office Automation", path: "/services/office-automation" },
     { name: "Hospital Automation", path: "/services/hospital-automation" },
-    { name: "Hotel Automation", path: "/services/hotel-automation" }
+    { name: "Hotel Automation", path: "/services/hotel-automation" },
   ];
 
   const products = [
@@ -56,7 +56,11 @@ const Navbar = () => {
     { name: "Smart Gates", path: "/products/smart-gates" },
     { name: "CCTV Cameras", path: "/products/cctv-cameras" },
     { name: "Smart Door Locks", path: "/products/smart-doorlocks" },
-    { name: "All Sensors", path: "/products/all-sensors" }
+    { name: "All Sensors", path: "/products/all-sensors" },
+    {
+      name: "Smart Switches",
+      path: "/products/smart-switches",
+    },
   ];
 
   const automation = [
@@ -68,21 +72,24 @@ const Navbar = () => {
         { name: "Profile", path: "/products/lighting-automation/profile" },
         { name: "Panel", path: "/products/lighting-automation/panel" },
         { name: "Indoor", path: "/products/lighting-automation/indoor" },
-        { name: "Outdoor", path: "/products/lighting-automation/outdoor" }
-      ]
+        { name: "Outdoor", path: "/products/lighting-automation/outdoor" },
+      ],
     },
     { name: "Audio-Video", path: "/products/audio-video" },
     { name: "Security Automation", path: "/products/security" },
     { name: "Smart Way Control", path: "/products/smart-way-control" },
     { name: "Smart Life App", path: "/products/smart-life-app" },
-    { name: "Third-Party Integration", path: "/products/third-party-integration" }
+    {
+      name: "Third-Party Integration",
+      path: "/products/third-party-integration",
+    },
   ];
 
   const resources = [
     { name: "Blogs", path: "/resources/blogs" },
     { name: "Case Studies", path: "/resources/case-studies" },
     { name: "Manuals", path: "/resources/manuals" },
-    { name: "Accessories", path: "/resources/accessories" }
+    { name: "Accessories", path: "/resources/accessories" },
   ];
 
   const glowClass =
@@ -106,16 +113,19 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-3 backdrop-blur-md">
         <div className="flex items-center justify-between">
-
           {/* LOGO */}
-          <Link to="/" className="flex items-center space-x-3" onClick={closeMobile}>
+          <Link
+            to="/"
+            className="flex items-center space-x-3"
+            onClick={closeMobile}
+          >
             <img
-              src="/images/new logo2.png"
+              src="/images/Outdoor/logofinal.png"
               alt="Smart Life Logo"
               className="h-10 w-auto object-contain"
             />
             <span className="text-white text-xl font-semibold">
-              Smart Life Solutions
+              Smart Life Solution
             </span>
           </Link>
 
@@ -135,10 +145,11 @@ const Navbar = () => {
                 Our Services <ChevronDown size={14} />
               </button>
 
-              <div className="absolute invisible group-hover:visible group-hover:opacity-100 
+              <div
+                className="absolute invisible group-hover:visible group-hover:opacity-100 
                 opacity-0 transition-all duration-200 top-full left-0 mt-2 w-56 
-                bg-black/90 border border-white/20 rounded-xl shadow-lg py-2 z-50">
-
+                bg-black/90 border border-white/20 rounded-xl shadow-lg py-2 z-50"
+              >
                 {services.map((item) => (
                   <Link
                     key={item.name}
@@ -148,7 +159,6 @@ const Navbar = () => {
                     {item.name}
                   </Link>
                 ))}
-
               </div>
             </div>
 
@@ -158,9 +168,11 @@ const Navbar = () => {
                 Our Products <ChevronDown size={14} />
               </button>
 
-              <div className="absolute invisible group-hover:visible group-hover:opacity-100 
+              <div
+                className="absolute invisible group-hover:visible group-hover:opacity-100 
                 opacity-0 transition-all duration-200 top-full left-0 mt-2 w-56 
-                bg-black/90 border border-white/20 rounded-xl shadow-lg py-2 z-50">
+                bg-black/90 border border-white/20 rounded-xl shadow-lg py-2 z-50"
+              >
                 {products.map((item) => (
                   <Link
                     key={item.name}
@@ -179,10 +191,11 @@ const Navbar = () => {
                 Our Solutions <ChevronDown size={14} />
               </button>
 
-              <div className="absolute invisible group-hover:visible group-hover:opacity-100 
+              <div
+                className="absolute invisible group-hover:visible group-hover:opacity-100 
                 opacity-0 transition-all duration-200 top-full left-0 mt-2 w-56 
-                bg-black/90 border border-white/20 rounded-xl shadow-lg py-2 z-50">
-
+                bg-black/90 border border-white/20 rounded-xl shadow-lg py-2 z-50"
+              >
                 {automation.map((item) => (
                   <div key={item.name} className="relative group/sub">
                     <Link
@@ -194,9 +207,11 @@ const Navbar = () => {
                     </Link>
 
                     {item.children && (
-                      <div className="absolute top-0 left-full ml-1 invisible group-hover/sub:visible 
+                      <div
+                        className="absolute top-0 left-full ml-1 invisible group-hover/sub:visible 
                         opacity-0 group-hover/sub:opacity-100 transition-all duration-200 bg-black/90
-                        w-48 border border-white/20 rounded-xl shadow-lg py-2 z-50">
+                        w-48 border border-white/20 rounded-xl shadow-lg py-2 z-50"
+                      >
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
@@ -208,10 +223,8 @@ const Navbar = () => {
                         ))}
                       </div>
                     )}
-
                   </div>
                 ))}
-
               </div>
             </div>
 
@@ -221,10 +234,11 @@ const Navbar = () => {
                 Resources <ChevronDown size={14} />
               </button>
 
-              <div className="absolute invisible group-hover:visible group-hover:opacity-100 
+              <div
+                className="absolute invisible group-hover:visible group-hover:opacity-100 
                 opacity-0 transition-all duration-200 top-full left-0 mt-2 w-56 bg-black/90 
-                border border-white/20 rounded-xl shadow-lg py-2 z-50">
-
+                border border-white/20 rounded-xl shadow-lg py-2 z-50"
+              >
                 {resources.map((item) => (
                   <Link
                     key={item.name}
@@ -252,14 +266,17 @@ const Navbar = () => {
             className="lg:hidden p-2 rounded-lg bg-white/20"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
+            {isMobileMenuOpen ? (
+              <X size={24} color="white" />
+            ) : (
+              <Menu size={24} color="white" />
+            )}
           </button>
         </div>
 
         {/* ---------------- MOBILE MENU ---------------- */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-3 bg-black/80 p-4 rounded-xl text-white space-y-4 text-sm">
-
             <Link to="/" className="block font-semibold" onClick={closeMobile}>
               Home
             </Link>
@@ -294,7 +311,6 @@ const Navbar = () => {
 
             {/* SOLUTIONS MOBILE */}
             <MobileSection title="Our Solutions">
-
               {/* LIGHTING AUTOMATION DROPDOWN */}
               <div>
                 <button
@@ -304,7 +320,9 @@ const Navbar = () => {
                   Lighting Automation
                   <ChevronDown
                     size={14}
-                    className={`transition-transform ${lightingOpen ? "rotate-180" : ""}`}
+                    className={`transition-transform ${
+                      lightingOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
 
@@ -334,7 +352,6 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-
             </MobileSection>
 
             {/* RESOURCES MOBILE */}
@@ -350,7 +367,6 @@ const Navbar = () => {
                 </Link>
               ))}
             </MobileSection>
-
           </div>
         )}
       </div>
