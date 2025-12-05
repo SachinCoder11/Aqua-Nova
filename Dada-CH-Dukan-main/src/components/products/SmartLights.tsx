@@ -27,7 +27,7 @@ const SmartLights: React.FC = () => {
       title: "Premium RGB / RGBW Controllers",
       desc:
         "Advanced ambient lighting controllers with precision color control, automation, and scene customization.",
-      img: "/images/Light Photo/light1.jpeg",
+      img: "/Lightimages/Rgb.jpg",
       features: [
         "RGB / RGBW / CCT Smart Control",
         "Mobile App + Touch Panel Support",
@@ -40,7 +40,7 @@ const SmartLights: React.FC = () => {
       title: "Smooth Zero-Flicker Dimming",
       desc:
         "Advanced dimming modules designed for modern LED lighting, perfect for ambience and task lighting.",
-      img: "/images/Light Photo/dimmer.png",
+      img: "/Lightimages/dimmer.jpg",
       features: [
         "Zero-Flicker Dim Technology",
         "Compatible With All LED & COB Lights",
@@ -53,7 +53,7 @@ const SmartLights: React.FC = () => {
       title: "Architectural Linear Lighting",
       desc:
         "Customizable profile lighting built for walls, ceilings, halls, and modern interior design patterns.",
-      img: "/images/Light Photo/Profilepatti.jpg",
+      img: "/Lightimages/archi.jpg",
       features: [
         "Premium Slimline Design",
         "Unlimited Layout Customization",
@@ -66,7 +66,7 @@ const SmartLights: React.FC = () => {
       title: "Modular Magnetic Spotlights",
       desc:
         "Effortlessly repositionable lighting system perfect for galleries, studios, and elegant living spaces.",
-      img: "/images/Light Photo/Magnetlight.jpg",
+      img: "/Lightimages/spot.jpg",
       features: [
         "Fully Modular Magnetic Track System",
         "Focused + Ambient Lighting Options",
@@ -79,7 +79,7 @@ const SmartLights: React.FC = () => {
       title: "High-Performance Ambient Lights",
       desc:
         "Powerful, efficient, and aesthetically clean architectural lights made for everyday use.",
-      img: "/images/Light Photo/Normalight.jpg",
+      img: "/Lightimages/hi.jpg",
       features: [
         "Bright & Efficient Illumination",
         "Perfect for Daily Usage",
@@ -87,6 +87,14 @@ const SmartLights: React.FC = () => {
       ],
     },
   ];
+
+  // Scroll to ContactForm
+  const scrollToContact = () => {
+    const el = document.getElementById("contact-form-section");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="w-full bg-white text-gray-800">
@@ -104,7 +112,7 @@ const SmartLights: React.FC = () => {
 
         <div className="relative z-10 text-center px-6 max-w-3xl">
           <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">
-            Smart <span className="text-yellow-300 underline">Lights</span>
+            Smart <span className="text-orange-400 underline">Lights</span>
           </h1>
           <p className="text-white/90 mt-5 text-lg md:text-xl">
             Intelligent lighting that adapts to your lifestyle, enhances ambience,
@@ -113,44 +121,31 @@ const SmartLights: React.FC = () => {
         </div>
       </section>
 
-      {/* ALL PRODUCT SECTIONS */}
+      {/* PRODUCT SECTIONS */}
       {sections.map((item, idx) => (
         <React.Fragment key={idx}>
           <section className="relative w-full py-32 overflow-hidden bg-white">
-            {/* ABSTRACT BACKGROUND */}
+            {/* SOFT BACKGROUND EFFECTS */}
             <div className="absolute inset-0 pointer-events-none">
-              <div
-                className="absolute top-[-80px] left-[-80px] w-[300px] h-[300px]
-                bg-gradient-to-br from-orange-200/30 to-white/10 blur-[120px] rounded-full"
-              />
+              <div className="absolute top-[-80px] left-[-80px] w-[300px] h-[300px]
+                bg-gradient-to-br from-orange-200/30 to-white/10 blur-[120px] rounded-full" />
 
-              <div
-                className="absolute bottom-[-80px] right-[-80px] w-[280px] h-[280px]
-                bg-gradient-to-tl from-black/5 to-orange-100/20 blur-[120px] rounded-full"
-              />
+              <div className="absolute bottom-[-80px] right-[-80px] w-[280px] h-[280px]
+                bg-gradient-to-tl from-black/5 to-orange-100/20 blur-[120px] rounded-full" />
             </div>
 
-            {/* LEFT–RIGHT LAYOUT FIX */}
             <div
-              className={`max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-20 items-center relative
+              className={`max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-20 items-center relative 
               ${idx % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
             >
-              {/* BIG BACK NUMBER */}
-              <h1 className="absolute top-8 left-0 text-[140px] font-black text-black/5 select-none">
-                {item.num}
-              </h1>
 
-              {/* IMAGE BLOCK */}
+              {/* IMAGE */}
               <div className="relative group w-full">
-                <div
-                  className="absolute -inset-6 bg-gradient-to-br from-orange-300/20 to-black/10 
-                  rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700"
-                ></div>
+                <div className="absolute -inset-6 bg-gradient-to-br from-orange-300/20 to-black/10 
+                  rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
-                <div
-                  className="relative rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.1)]
-                  border border-black/5 transition-all duration-500 group-hover:scale-[1.03]"
-                >
+                <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.1)]
+                  border border-black/5 transition-all duration-500 group-hover:scale-[1.03]">
                   <img
                     src={item.img}
                     className="w-full h-[450px] object-cover transition-transform duration-[900ms]
@@ -159,8 +154,8 @@ const SmartLights: React.FC = () => {
                 </div>
               </div>
 
-              {/* TEXT BLOCK */}
-              <div className="relative animate-slideFadeUp max-w-xl">
+              {/* TEXT */}
+              <div className="relative max-w-xl">
                 <span className="inline-block px-4 py-1 mb-4 rounded-full text-sm bg-black text-white shadow-md">
                   {item.tag}
                 </span>
@@ -182,23 +177,29 @@ const SmartLights: React.FC = () => {
                   ))}
                 </div>
 
-                <button className="px-8 py-3 bg-black text-white rounded-full font-semibold hover:bg-orange-600 transition shadow-lg">
+                {/* UPDATED BUTTON */}
+                <button
+                  onClick={scrollToContact}
+                  className="px-8 py-3 bg-black text-white rounded-full font-semibold hover:bg-orange-600 transition shadow-lg"
+                >
                   Know More
                 </button>
               </div>
             </div>
           </section>
 
-          {/* Divider between products */}
           <div className="w-full h-[2px] bg-gradient-to-r from-orange-500 via-black to-orange-500" />
         </React.Fragment>
       ))}
-       <ContactForm />
+
+      {/* Contact Form anchor point */}
+      <div id="contact-form-section">
+        <ContactForm />
+      </div>
+
       <Footer />
     </div>
-    
   );
 };
-
 
 export default SmartLights;

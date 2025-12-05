@@ -9,35 +9,35 @@ const About = () => {
   ];
 
   const stats = [
-    { icon: Building2, value: "20,000+", label: "Homes Automated" },
+    { icon: Building2, value: "200+", label: "Homes Automated" },
     { icon: MapPin, value: "50+", label: "Cities Active" },
     { icon: Heart, value: "99%", label: "Client Satisfaction" }
   ];
 
   return (
-    <section className="bg-white py-24 font-[Poppins]">
+    <section className="bg-white py-24 font-[Nasalization] tracking-wide text-gray-900 antialiased">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TOP STRIPE SECTION */}
         <div className="bg-black rounded-2xl p-8 md:p-12 text-white flex flex-col lg:flex-row items-center gap-10 mb-24">
 
           {/* TEXT */}
-          <div className="flex-1 space-y-5">
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
+          <div className="flex-1 space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold leading-snug tracking-wider">
               Smart Automation <span className="text-orange-400">Made Invisible.</span>
             </h2>
 
-            <p className="text-gray-300 text-sm leading-relaxed max-w-md">
-              True luxury is when your home adapts to you — silently, seamlessly, and intelligently.
+            <p className="text-gray-300 text-xs md:text-sm leading-relaxed max-w-md tracking-wide">
+              True luxury is when your home adapts silently, seamlessly, and intelligently.
               That’s the soul of Smart Life Solutions.
             </p>
 
             {/* INLINE STATS */}
-            <div className="flex gap-8 mt-6">
+            <div className="flex gap-10 mt-6">
               {stats.map((s, i) => (
                 <div key={i} className="text-center">
-                  <p className="text-xl font-semibold">{s.value}</p>
-                  <p className="text-gray-400 text-xs">{s.label}</p>
+                  <p className="text-xl md:text-2xl font-bold tracking-widest">{s.value}</p>
+                  <p className="text-gray-400 text-xs md:text-sm tracking-wide">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -80,7 +80,7 @@ const About = () => {
               "
             >
 
-              {/* ICON – ELEGANT, NOT FLASHY */}
+              {/* ICON */}
               <div
                 className="
                   w-14 h-14 rounded-xl
@@ -94,8 +94,8 @@ const About = () => {
                 <f.icon size={26} strokeWidth={1.6} />
               </div>
 
-              <h4 className="text-lg font-semibold text-black mb-2">{f.title}</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+              <h4 className="text-lg font-bold text-black mb-2 tracking-wider">{f.title}</h4>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed tracking-wide">{f.desc}</p>
             </motion.div>
           ))}
         </div>

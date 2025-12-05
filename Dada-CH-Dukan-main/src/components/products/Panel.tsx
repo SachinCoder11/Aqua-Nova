@@ -22,7 +22,7 @@ const Panel = () => {
       ======================================= */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="/Public/images/Panel/Herodaphoto.png"
+          src="/images/Panel/Herodaphoto.png"
           className="absolute inset-0 w-full h-full object-cover "
         />
 

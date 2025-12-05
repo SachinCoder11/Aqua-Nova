@@ -34,11 +34,7 @@ const ContactForm: React.FC = () => {
               <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center">
                 <MapPin size={18} />
               </div>
-              <p className="text-black text-sm leading-relaxed">
-                A-09-02-B, Kamdhenu Estate, <br />
-                Opp. Gorwa Water Tank, Gorwa, <br />
-                Vadodara, India - 390016
-              </p>
+             
             </div>
           </div>
         </div>

@@ -8,13 +8,13 @@ const SmartGates: React.FC = () => {
     {
       title: "Sliding Gate Motor",
       text: "Heavy-duty automation with smooth lateral motion and high load handling—ideal for residential, villa and industrial gates.",
-      video: "/src/Videos/Gate/gatevid.mp4",
+      video: "/gatevid/gatevideo.mp4",
       videoHeight: "h-[420px]"
     },
     {
       title: "Shutter & Garage Motor",
       text: "Reliable rolling shutter automation with overload safety, auto-locking, and whisper-quiet performance.",
-      video: "/src/Videos/Gate/shutter.mp4",
+      video: "/gatevid/shutter.mp4",
       videoHeight: "h-72"
     },
     {
@@ -26,7 +26,7 @@ const SmartGates: React.FC = () => {
     {
       title: "Cantilever Gate Motor",
       text: "Trackless sliding automation with zero ground obstruction—built for premium modern architecture.",
-      video: "https://www.youtube.com/embed/DoKOuiGcKLs",
+      video: "/gatevid/Untitled design.mp4",
       videoHeight: "h-72"
     }
   ];
@@ -36,16 +36,9 @@ const SmartGates: React.FC = () => {
 
       {/* HERO SECTION */}
       <section className="relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
-        <video
-          src="/src/images/Gate/hero-gate.mp4"
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+     <img  src="/Hero/gatehero.png" alt="" className="absolute inset-0 w-full h-full object-cover"/>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-black/20"></div>
 
         <motion.div
           initial={{ y: 60, opacity: 0 }}

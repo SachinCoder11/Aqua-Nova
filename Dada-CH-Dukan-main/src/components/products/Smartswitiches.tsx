@@ -1,41 +1,46 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+// ICONS for top 3 feature cards
+import { MdDesignServices } from "react-icons/md";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
+import { HiOutlineCpuChip } from "react-icons/hi2";
+
 const categories = [
   {
     id: "touch",
     name: "Smart Touch Plates",
-    img: "/Products/switch-touch.png",
+    img: "https://bizimages.withfloats.com/actual/a9f1d28f8afc4f77863c65183e0bfcdd.jpg",
     desc: "Premium glass touch panels designed for modern homes.",
   },
   {
     id: "retro",
     name: "Retro Fit Smart Switches",
-    img: "/Products/switch-retro.png",
+    img: "https://bizimages.withfloats.com/actual/9845fc0fa91743b4a2b59d4ca8534df2.jpg",
     desc: "Install without rewiring. Perfect for upgrades and renovations.",
   },
   {
     id: "scene",
     name: "Scene Switches",
-    img: "/Products/switch-scene.png",
+    img: "https://productimages.withfloats.com/serviceimages/tile/641c321f472ae5787103e7efTouchCurtainSwitch-Black",
     desc: "Trigger lighting, curtains and ambiance with a single tap.",
   },
   {
     id: "knx",
     name: "KNX Switches",
-    img: "/Products/switch-knx.png",
+    img: "/images/Switches/knx.png",
     desc: "Industry-standard KNX smart control for enterprise automation.",
   },
   {
     id: "zigbee",
     name: "Zigbee Switches",
-    img: "/Products/switch-zigbee.png",
+    img: "/images/Switches/2.png",
     desc: "Wireless Zigbee switches compatible with major smart hubs.",
   },
   {
     id: "sensor",
     name: "Smart Sensors",
-    img: "/Products/switch-sensor.png",
+    img: "/images/Switches/laast.png",
     desc: "Motion, presence, temperature and ambient sensors.",
   },
 ];
@@ -50,9 +55,7 @@ const SmartSwitches = () => {
   const [selected, setSelected] = useState("all");
 
   const filtered =
-    selected === "all"
-      ? categories
-      : categories.filter((c) => c.id === selected);
+    selected === "all" ? categories : categories.filter((c) => c.id === selected);
 
   return (
     <div className="w-full bg-white text-gray-900">
@@ -60,7 +63,7 @@ const SmartSwitches = () => {
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[80vh] flex items-center justify-center">
         <img
-          src="/Products/switch-hero.jpg"
+          src="/Hero/sh.png"
           alt="Smart Switch Automation"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -96,20 +99,22 @@ const SmartSwitches = () => {
           </p>
         </motion.div>
 
-        {/* BULLET POINT GRID WITH IMAGES */}
+        {/* ICON-BASED FEATURE CARDS */}
         <div className="mt-14 grid md:grid-cols-3 gap-8">
           {[
             {
               label: "Elegant Design",
-              img: "/icons/design.png",
+              icon: <MdDesignServices className="w-12 h-12 text-orange-600 mx-auto mb-4" />,
             },
             {
               label: "Seamless Integration",
-              img: "/icons/integration.png",
+              icon: (
+                <IoExtensionPuzzleOutline className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              ),
             },
             {
               label: "Future-Proof Tech",
-              img: "/icons/technology.png",
+              icon: <HiOutlineCpuChip className="w-12 h-12 text-orange-600 mx-auto mb-4" />,
             },
           ].map((item, i) => (
             <motion.div
@@ -117,7 +122,7 @@ const SmartSwitches = () => {
               {...fadeUp}
               className="p-6 rounded-xl border bg-white shadow hover:shadow-lg transition"
             >
-              <img src={item.img} className="w-12 h-12 mx-auto mb-4" />
+              {item.icon}
               <p className="font-semibold text-lg text-gray-800 text-center">
                 {item.label}
               </p>
@@ -128,12 +133,7 @@ const SmartSwitches = () => {
 
       {/* ================= SWITCH CATALOGUE SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 pb-20">
-
-        {/* TITLE */}
-        <motion.div
-          {...fadeUp}
-          className="text-center max-w-3xl mx-auto mb-12"
-        >
+        <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl font-bold">
             Explore Our{" "}
             <span className="text-orange-600">Smart Switch Range</span>
@@ -144,7 +144,6 @@ const SmartSwitches = () => {
           </p>
         </motion.div>
 
-        {/* PDF BUTTON */}
         <div className="flex justify-center mb-12">
           <a
             href="/catalogues/smart-switches.pdf"
@@ -201,7 +200,6 @@ const SmartSwitches = () => {
             </motion.div>
           ))}
         </div>
-
       </section>
     </div>
   );

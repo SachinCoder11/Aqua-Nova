@@ -17,6 +17,11 @@ const fadeUp = {
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 0.7 },
 };
+const handleContactClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
 const HotelAutomation = () => {
   return (
@@ -79,9 +84,13 @@ const HotelAutomation = () => {
             together to elevate your hospitality experience.
           </p>
 
-          <button className="px-6 py-3 bg-black text-white rounded-xl hover:bg-orange-600 transition-all">
-            Contact Us
-          </button>
+    <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors"
+>
+  Contact Us
+</button>
+
         </motion.div>
       </section>
 
@@ -115,9 +124,13 @@ const HotelAutomation = () => {
               <li>• Modern hospitality workflows</li>
             </ul>
 
-            <button className="px-6 py-3 bg-black text-white rounded-xl hover:bg-orange-600 transition-all mt-3">
-              Contact Us
-            </button>
+        <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors"
+>
+  Contact Us
+</button>
+
           </div>
 
           {/* IMAGE */}

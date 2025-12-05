@@ -8,10 +8,10 @@ type Slide = {
 };
 
 const slides: Slide[] = [
-  { id: "i1", src: "/Hero/h5.png", title: "Lighting That Thinks With You", subtitle: "Create the perfect mood in every corner of your home." },
-  { id: "i2", src: "/Hero/h4.jpg", title: "Live Smarter, Feel Better", subtitle: "Effortless control. Beautiful ambiance. Everyday comfort." },
-  { id: "i3", src: "/Hero/h6.png", title: "Where Comfort Meets Intelligence", subtitle: "Lighting that adapts to your lifestyle automatically." },
-  { id: "i4", src: "/Hero/h7.png", title: "Crafting The Perfect Atmosphere", subtitle: "Smarter illumination for modern living spaces." }
+  { id: "i1", src: "/Hero/h5.jpg", title: "Lighting That Thinks With You", subtitle: "Create the perfect mood in every corner of your home." },
+  { id: "i2", src: "/Hero/h2.png", title: "Live Smarter, Feel Better", subtitle: "Effortless control. Beautiful ambiance. Everyday comfort." },
+  { id: "i3", src: "/Hero/h3.jpg", title: "Where Comfort Meets Intelligence", subtitle: "Lighting that adapts to your lifestyle automatically." },
+  { id: "i4", src: "/Hero/h6.jpg", title: "Crafting The Perfect Atmosphere", subtitle: "Smarter illumination for modern living spaces." }
 ];
 
 const AUTO = 9000;
@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
       ))}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* TEXT */}
       <div className="absolute inset-0 z-20 flex items-center px-8 md:px-24">

@@ -20,6 +20,11 @@ import ContactForm from "../sections/ContactForm";
 import Footer from "../layout/Footer";
 
 const LightingAutomation: React.FC = () => {
+  const goToContact = () => {
+    const el = document.getElementById("contact-form-anchor");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   const applianceIcons: any = {
     "Ceiling Fan": IconWind,
     Lamp: Lamp,
@@ -45,39 +50,41 @@ const LightingAutomation: React.FC = () => {
     <div className="w-full bg-white text-gray-900">
 
       {/* =========================================================
-          HERO SECTION (Fixed Aspect Ratio + No Cutting)
+          HERO SECTION — FULL-WIDTH VIDEO, NO CROPPING
       ========================================================= */}
-      <section className="relative w-full flex items-center justify-center px-4 mt-6">
-        <div className="relative w-full max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-xl aspect-[16/9]">
+      <section className="relative w-full mt-6">
+        <div className="relative w-full max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-xl">
 
           <video
-            src="/Public/Videos/Light/lightaotimation.webm"
-            className="absolute inset-0 w-full h-full object-cover"
+            src="/Hero/lah.mp4"
+            className="w-full h-auto rounded-3xl"
             autoPlay
             loop
             muted
             playsInline
           />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80 rounded-3xl"></div>
 
-          <div className="relative z-10 text-center px-6 max-w-3xl mx-auto top-1/4">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
             <img
               src="/Public/images/new logo2.png"
               alt="icon"
-              className="w-16 mx-auto mb-4 opacity-90"
+              className="w-16 mb-4 opacity-90"
             />
 
-            <h1 className="text-4xl md:text-6xl font-bold text-white">
-              Smart Space
-              <span className="text-orange-400"> Lighting Automation</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow">
+              Smart Space<span className="text-orange-400"> Lighting Automation</span>
             </h1>
 
             <p className="text-white/90 mt-4 text-lg">
               Lighting that adapts to your lifestyle with intelligence and elegance.
             </p>
 
-            <button className="mt-6 bg-orange-500 text-white px-7 py-3 rounded-lg font-semibold hover:bg-orange-600 transition">
+            <button
+              onClick={goToContact}
+              className="mt-6 bg-orange-500 text-white px-7 py-3 rounded-lg font-semibold hover:bg-orange-600 transition"
+            >
               Contact Us
             </button>
           </div>
@@ -85,7 +92,7 @@ const LightingAutomation: React.FC = () => {
       </section>
 
       {/* =========================================================
-          SECTION 2 — TEXT + VIDEO
+          SECTION 2 — TEXT + PROPER VIDEO (FULL WIDTH)
       ========================================================= */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
         <div className="animate-slideUp">
@@ -99,35 +106,40 @@ const LightingAutomation: React.FC = () => {
             <span className="text-orange-500"> Designed</span> for Modern Living
           </h2>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
-            Lighting automation enhances comfort, improves energy efficiency,
+          <p className="mt-4 text-gray-600">
+            Lighting automation enhances comfort, reduces power bills,
             and gives you complete control.
           </p>
 
-          <p className="mt-4 text-gray-600 leading-relaxed">
-            Seamlessly integrates with switches, apps, voice assistants,
-            and backend systems.
+          <p className="mt-4 text-gray-600">
+            Integrates perfectly with switches, apps, scenes and smart home systems.
           </p>
 
-          <button className="mt-6 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition">
+          <button
+            onClick={goToContact}
+            className="mt-6 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition"
+          >
             Contact Us
           </button>
         </div>
 
-        <div className="w-full">
-          <video
-            src="/images/Light Photo/lightvid.mp4"
-            className="w-full h-[350px] rounded-3xl object-cover shadow-lg"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        </div>
+       <div className="w-full h-full">
+  <div className="relative w-full h-[350px] md:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden shadow-lg">
+    <video
+      src="/videos/Light/Untitled video - Made with Clipchamp.mp4"
+      className="absolute inset-0 w-full h-full object-cover"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+  </div>
+</div>
+
       </section>
 
       {/* =========================================================
-          SECTION 3 — SMART APPLIANCE ICONS
+          SECTION 3 — APPLIANCE ICONS
       ========================================================= */}
       <section className="w-full py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -152,14 +164,10 @@ const LightingAutomation: React.FC = () => {
                              hover:shadow-lg transition-all duration-300 flex flex-col
                              items-center justify-center"
                 >
-                  <div
-                    className="w-14 h-14 flex items-center justify-center rounded-full
-                               bg-gray-50 hover:bg-orange-100 transition-all"
-                  >
-                    <Icon className="w-7 h-7 text-gray-700 hover:text-orange-500 transition" />
+                  <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-50">
+                    <Icon className="w-7 h-7 text-gray-700" />
                   </div>
-
-                  <p className="mt-4 text-sm font-semibold text-gray-700 hover:text-orange-500 transition">
+                  <p className="mt-4 text-sm font-semibold text-gray-700">
                     {label}
                   </p>
                 </div>
@@ -170,53 +178,69 @@ const LightingAutomation: React.FC = () => {
       </section>
 
       {/* =========================================================
-          SECTION 4 — DEVICE CARDS (UNIFORM IMAGE SIZES)
+          SECTION 4 — FIXED PRODUCT CARD SIZING (NO PHOTO FRAME LOOK)
       ========================================================= */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center">
-          Lighting <span className="text-orange-500">Automation Devices</span>
-        </h2>
+     <section className="max-w-7xl mx-auto px-6 py-20">
+  <h2 className="text-3xl font-bold text-center">
+    Lighting <span className="text-orange-500">Automation Devices</span>
+  </h2>
 
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mt-3">
-          Discover intelligent lighting controls designed to enhance your comfort.
-        </p>
+  <p className="text-gray-600 text-center max-w-2xl mx-auto mt-3">
+    Discover intelligent lighting controls designed to enhance your comfort.
+  </p>
 
-        <div className="grid md:grid-cols-3 gap-10 mt-12">
-          {[1, 2, 3].map((_, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl border border-gray-200 shadow-sm 
-                         p-6 hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-xl font-bold text-gray-900">
-                {idx === 0 && <>Smart <span className="text-orange-500">Device</span></>}
-                {idx === 1 && <>Remote <span className="text-orange-500">Device</span></>}
-                {idx === 2 && <>DALI <span className="text-orange-500">Controller</span></>}
-              </h3>
-
-              <p className="mt-2 text-gray-600">
-                {idx === 0 && "Convert your existing switches into smart modules."}
-                {idx === 1 && "Works even without Wi-Fi or internet."}
-                {idx === 2 && "Professional-grade lighting control."}
-              </p>
-
-              {/* UNIFORM IMAGE BOX */}
-              <div className="w-full aspect-[4/3] mx-auto mt-6 rounded-xl overflow-hidden bg-white">
-                <img
-                  src={deviceImages[idx]}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              <button className="mt-6 bg-orange-500 text-white px-5 py-2 rounded-lg w-full hover:bg-orange-600 transition">
-                View More
-              </button>
-            </div>
-          ))}
+  <div className="grid md:grid-cols-3 gap-10 mt-12">
+    {[1, 2, 3].map((_, idx) => (
+      <div
+        key={idx}
+        className="bg-white rounded-2xl border border-gray-200 shadow-sm 
+                   overflow-hidden hover:shadow-xl transition duration-300 flex flex-col"
+      >
+        {/* IMAGE — FULL CARD TOP, CLEAN, EQUAL */}
+        <div className="w-full h-64 bg-gray-100">
+          <img
+            src={deviceImages[idx]}
+            className="w-full h-full object-cover"
+            alt=""
+          />
         </div>
-      </section>
 
-      <ContactForm />
+        {/* TEXT */}
+        <div className="p-6 flex-grow">
+          <h3 className="text-xl font-bold text-gray-900">
+            {idx === 0 && <>Smart <span className="text-orange-500">Device</span></>}
+            {idx === 1 && <>Remote <span className="text-orange-500">Device</span></>}
+            {idx === 2 && <>DALI <span className="text-orange-500">Controller</span></>}
+          </h3>
+
+          <p className="mt-2 text-gray-600">
+            {idx === 0 && "Convert your existing switches into smart modules."}
+            {idx === 1 && "Works even without Wi-Fi or internet."}
+            {idx === 2 && "Professional-grade lighting control."}
+          </p>
+        </div>
+
+        {/* BUTTON */}
+        <div className="px-6 pb-6">
+          <button
+            onClick={goToContact}
+            className="bg-orange-500 text-white px-5 py-2 rounded-lg w-full hover:bg-orange-600 transition"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+      {/* =========================================================
+          CONTACT FORM + FOOTER
+      ========================================================= */}
+      <div id="contact-form-anchor">
+        <ContactForm />
+      </div>
+
       <Footer />
     </div>
   );

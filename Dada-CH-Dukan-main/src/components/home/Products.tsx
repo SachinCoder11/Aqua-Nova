@@ -14,10 +14,10 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const products = [
     { icon: IconBulb, title: "Lighting Automation", description: "Smart lighting systems that enhance mood, save power, and adjust automatically.", link: "/products/lighting-automation" },
-    { icon: IconWind, title: "HVAC & Audio-Video", description: "Climate control, multimedia, and ambience systems unified brilliantly.", link: "/products/hvac-audio-video" },
+    { icon: IconWind, title: "HVAC & Audio-Video", description: "Climate control, multimedia, and ambience systems unified brilliantly.", link: "/products/audio-video" },
     { icon: IconShieldLock, title: "Security Solutions", description: "Advanced surveillance, access control, sensors, and real-time security alerts.", link: "/products/security" },
     { icon: IconDeviceRemote, title: "Smart Way Control", description: "High-precision smart controllers and switches for effortless automation.", link: "/products/smart-way-control" },
-    { icon: IconDeviceMobile, title: "Smart Life App", description: "Control everything from one intuitive, modern, and secure mobile app.", link: "/products/smartlife-app" },
+    { icon: IconDeviceMobile, title: "Smart Life App", description: "Control everything from one intuitive, modern, and secure mobile app.", link: "smart-life-app" },
     { icon: IconPuzzle, title: "3rd-Party Integrations", description: "Integrates with Alexa, HomeKit, and 30+ smart devices.", link: "/products/third-party-integration" },
   ];
 

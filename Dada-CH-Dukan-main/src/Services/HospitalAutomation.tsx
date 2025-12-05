@@ -15,6 +15,11 @@ const fadeUp = {
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
 };
+const handleContactClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
 const HospitalAutomation = () => {
   return (
@@ -77,9 +82,13 @@ const HospitalAutomation = () => {
             improves safety, and ensures staff can focus more on patient care.
           </p>
 
-          <button className="px-6 py-3 bg-black text-white rounded-xl hover:bg-orange-600 transition-all">
-            Contact Us
-          </button>
+       <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors">
+
+  Contact Us
+</button>
+
         </motion.div>
       </section>
 
@@ -114,9 +123,13 @@ const HospitalAutomation = () => {
               <li>• Seamless device integration</li>
             </ul>
 
-            <button className="px-6 py-3 bg-black text-white rounded-xl hover:bg-orange-600 transition-all mt-3">
-              Contact Us
-            </button>
+        <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors"
+>
+  Contact Us
+</button>
+
           </div>
 
           {/* IMAGE RIGHT */}

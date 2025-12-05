@@ -54,9 +54,13 @@ const Navbar = () => {
   const products = [
     { name: "Smart Lights", path: "/products/smart-lights" },
     { name: "Smart Gates", path: "/products/smart-gates" },
-    { name: "CCTV Cameras", path: "/products/cctv-cameras" },
+    // { name: "CCTV Cameras", path: "/products/cctv-cameras" },
     { name: "Smart Door Locks", path: "/products/smart-doorlocks" },
     { name: "All Sensors", path: "/products/all-sensors" },
+    {
+      name: "Curtain Automation",
+      path: "/products/Curtain-Automation",
+    },
     {
       name: "Smart Switches",
       path: "/products/smart-switches",
@@ -86,10 +90,11 @@ const Navbar = () => {
   ];
 
   const resources = [
-    { name: "Blogs", path: "/resources/blogs" },
-    { name: "Case Studies", path: "/resources/case-studies" },
-    { name: "Manuals", path: "/resources/manuals" },
-    { name: "Accessories", path: "/resources/accessories" },
+    { name: "Comming Soon", path: "/services/home-automation" },
+    // { name: "Blogs", path: "/resources/blogs" },
+    // { name: "Case Studies", path: "/resources/case-studies" },
+    // { name: "Manuals", path: "/resources/manuals" },
+    // { name: "Accessories", path: "/resources/accessories" },
   ];
 
   const glowClass =
@@ -287,7 +292,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="block pl-3 py-1 hover:text-green-400"
+                  className="block pl-3 py-1 hover:text-orange-400"
                   onClick={closeMobile}
                 >
                   {item.name}
@@ -301,7 +306,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="block pl-3 py-1 hover:text-green-400"
+                  className="block pl-3 py-1 hover:text-orange-400"
                   onClick={closeMobile}
                 >
                   {item.name}
@@ -315,7 +320,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={handleLightingClick}
-                  className="w-full text-left pl-3 py-2 flex items-center justify-between hover:text-green-400"
+                  className="w-full text-left pl-3 py-2 flex items-center justify-between hover:text-orange-400"
                 >
                   Lighting Automation
                   <ChevronDown
@@ -332,7 +337,7 @@ const Navbar = () => {
                       <Link
                         key={child.path}
                         to={child.path}
-                        className="block py-1 hover:text-green-400"
+                        className="block py-1 hover:text-orange-400"
                         onClick={closeMobile}
                       >
                         {child.name}
@@ -346,7 +351,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="block pl-3 py-2 hover:text-green-400"
+                  className="block pl-3 py-2 hover:text-orange-400"
                   onClick={closeMobile}
                 >
                   {item.name}
@@ -360,7 +365,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="block pl-3 py-1 hover:text-green-400"
+                  className="block pl-3 py-1 hover:text-orange-400"
                   onClick={closeMobile}
                 >
                   {item.name}

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
-  ArrowRight,
   Fan,
   Lamp,
   Tv,
@@ -11,7 +10,7 @@ import {
   WashingMachine,
   Mic
 } from "lucide-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ContactForm from "../sections/ContactForm";
 import Footer from "../layout/Footer";
 
@@ -27,6 +26,57 @@ const applianceIcons = [
   { icon: <Tv size={32} />, label: "TV" },
   { icon: <Mic size={32} />, label: "Microwave" }
 ];
+const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
+
+// Reusable Video Card Component
+const VideoCard = ({ src, title }: any) => {
+  const videoRef = useRef<any>(null);
+  const [muted, setMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !muted;
+      setMuted(!muted);
+    }
+  };
+
+  return (
+    <div className="p-6 bg-white rounded-3xl shadow-lg border hover:shadow-2xl transition relative">
+
+      {/* TITLE */}
+      <h3 className="text-2xl font-bold mb-4 text-gray-800">
+        {title}
+      </h3>
+
+      {/* VIDEO */}
+     {/* VIDEO */}
+<div className="rounded-2xl overflow-hidden shadow-md">
+  <video
+    ref={videoRef}
+    src={src}
+    autoPlay
+    loop
+    muted={muted}
+    playsInline
+    className="w-full h-[340px] object-cover"
+  />
+</div>
+
+
+      {/* MUTE BUTTON */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-6 right-6 bg-black/60 text-white px-3 py-1.5 rounded-lg text-sm hover:bg-black/80 transition"
+      >
+        {muted ? "Unmute" : "Mute"}
+      </button>
+    </div>
+  );
+};
 
 const AudioVideoSection: React.FC = () => {
   return (
@@ -47,48 +97,52 @@ const AudioVideoSection: React.FC = () => {
       </section>
 
       {/* ================= TEXT + IMAGE SECTION ================= */}
-      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+  {/* ================= TEXT + IMAGE SECTION ================= */}
+<section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT TEXT */}
-        <div>
-          <p className="text-orange-500 font-medium mb-2">Control at Your Fingertips</p>
+  {/* LEFT TEXT */}
+  <div>
+    <p className="text-orange-500 font-medium mb-2">Control at Your Fingertips</p>
 
-          <h2 className="text-4xl font-extrabold leading-snug">
-            Smarter <span className="text-orange-500 underline">Audio-Video</span>
-            <br /> For Modern Living
-          </h2>
+    <h2 className="text-4xl font-extrabold leading-snug">
+      Smarter <span className="text-orange-500 underline">Audio-Video</span>
+      <br /> For Modern Living
+    </h2>
 
-          <p className="text-gray-700 mt-6 leading-relaxed">
-            Take control of your entertainment effortlessly. Automate your TVs,
-            speakers, home theatre, and media devices using a single smart system
-            that blends luxury with convenience.
-          </p>
+    <p className="text-gray-700 mt-6 leading-relaxed">
+      Take control of your entertainment effortlessly. Automate your TVs,
+      speakers, home theatre, and media devices using a single smart system
+      that blends luxury with convenience.
+    </p>
 
-          <p className="text-gray-700 mt-4 leading-relaxed">
-            Enjoy responsive controls, routines, voice commands and rich integration
-            with your lifestyle.
-          </p>
+    <p className="text-gray-700 mt-4 leading-relaxed">
+      Enjoy responsive controls, routines, voice commands and rich integration
+      with your lifestyle.
+    </p>
 
-          <button className="mt-8 px-7 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition">
-            Contact Us
-          </button>
-        </div>
+    {/* FIXED CONTACT BUTTON */}
+    <button
+  onClick={(e) => handleContactClick(e as any)}
+  className="mt-8 px-7 py-3 bg-orange-500 text-white rounded-lg font-semibold hover:bg-orange-600 transition"
+>
+  Contact Us
+</button>
 
-        {/* RIGHT IMAGE (video removed but image intact) */}
-        <div className="flex justify-center">
-          <div className="w-[380px] h-[380px] rounded-full overflow-hidden shadow-[0_0_30px_rgba(255,123,0,0.35)] border-4 border-orange-500">
+  </div>
 
-            {/* STATIC IMAGE (kept EXACT path) */}
-            <img
-              src="/images/Audio/ChatGPT Image Dec 1, 2025, 01_38_10 AM.png"
-              alt="Audio Video Automation"
-              className="w-full h-full object-cover"
-            />
+  {/* RIGHT IMAGE — NOW RECTANGLE WITH BORDER RADIUS */}
+  <div className="flex justify-center">
+    <div className="w-[420px] h-[300px] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,123,0,0.35)] border-4 border-orange-500">
+      <img
+        src="/images/Audio/ChatGPT Image Dec 1, 2025, 01_38_10 AM.png"
+        alt="Audio Video Automation"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
 
-          </div>
-        </div>
+</section>
 
-      </section>
 
       {/* ================= ICON GRID ================= */}
       <section className="py-20">
@@ -106,61 +160,29 @@ const AudioVideoSection: React.FC = () => {
               hover:shadow-lg hover:border-orange-500 transition-all flex flex-col 
               items-center justify-center gap-1"
             >
-              <div className="text-gray-700 group-hover:text-orange-500">
-                {item.icon}
-              </div>
+              <div>{item.icon}</div>
               <p className="text-xs text-gray-500">{item.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ================= PRODUCT CARDS ================= */}
-      <section className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16">
+      {/* ================= NEW — 3 PREMIUM VIDEO SECTIONS ================= */}
+      {/* ================= UPDATED — 2 PREMIUM VIDEO SECTIONS ================= */}
+<section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12">
 
-        {/* IR EMITTER */}
-        <div className="p-10 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl transition">
-          <h3 className="text-3xl font-bold text-gray-900">
-            IR <span className="text-orange-500">Emitter</span>
-          </h3>
+  <VideoCard
+    title="Whole Home AV Integration"
+    src="/videos/audio/A1.mp4"
+  />
 
-          <p className="text-gray-700 mt-4 leading-relaxed">
-            Make traditional IR devices smart. Control TVs, ACs and media devices
-            through automation, apps and voice commands.
-          </p>
+  <VideoCard
+    title="Home Theatre Experience"
+    src="/videos/audio/A2.mp4"
+  />
 
-          <img
-            src="/images/Audio/IR-Emitter.png.png"
-            className="w-64 mx-auto mt-10"
-          />
+</section>
 
-          <button className="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg w-full hover:bg-orange-600 flex items-center justify-center gap-2 transition">
-            View More <ArrowRight size={18} />
-          </button>
-        </div>
-
-        {/* IR BLASTER */}
-        <div className="p-10 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl transition">
-          <h3 className="text-3xl font-bold text-gray-900">
-            IR <span className="text-orange-500">Blaster</span>
-          </h3>
-
-          <p className="text-gray-700 mt-4 leading-relaxed">
-            Replace all your remotes with one powerful smart controller. Automate
-            AC, TV, home theatre and more.
-          </p>
-
-          <img
-            src="/images/Audio/IR-Blaster.png.png"
-            className="w-64 mx-auto mt-10"
-          />
-
-          <button className="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg w-full hover:bg-orange-600 flex items-center justify-center gap-2 transition">
-            View More <ArrowRight size={18} />
-          </button>
-        </div>
-
-      </section>
 
       <ContactForm />
       <Footer />

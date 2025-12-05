@@ -14,11 +14,12 @@ import Founders from "./components/home/Founders";
 import Testimonials from "./components/home/Testimonials";
 import ContactForm from "./components/sections/ContactForm";
 import Footer from "./components/layout/Footer";
+import Doorlocks from "./components/products/Doorlocks";
 
 // PRODUCTS
 import SmartLights from "./components/products/SmartLights";
 import SmartGates from "./components/products/SmartGates";
-import CctvCameras from "./components/products/CctvCameras";
+// import CctvCameras from "./components/products/CctvCameras";
 import SmartDoorlocks from "./components/products/SmartDoorlocks";
 import AllSensors from "./components/products/AllSensors";
 
@@ -38,14 +39,16 @@ import ThirdPartyIntegration from "./components/soloutions/ThirdPartyIntegration
 import AudioVideoSection from "./components/soloutions/AUDIOVIDEO";
 
 // RESOURCES
-import Blogs from "./components/pages/Blogs";
-import CaseStudies from "./components/pages/CaseStudies";
-import Manuals from "./components/pages/Manuals";
-import Accessories from "./components/pages/Accessories";
+// import Blogs from "./components/pages/Blogs";
+// import CaseStudies from "./components/pages/CaseStudies";
+// import Manuals from "./components/pages/Manuals";
+// import Accessories from "./components/pages/Accessories";
+
 import OfficeAutamation from "./Services/OfficeAutamation";
 import HospitalAutomation from "./Services/HospitalAutomation";
 import HotelAutomation from "./Services/HotelAutomation";
 import SmartSwitches from "./components/products/Smartswitiches";
+import CurtainAutomation from "./components/products/CurtainAutomation";
 
 function App() {
   return (
@@ -73,10 +76,11 @@ function App() {
         {/* PRODUCT PAGES */}
         <Route path="/products/smart-lights" element={<SmartLights />} />
         <Route path="/products/smart-gates" element={<SmartGates />} />
-        <Route path="/products/cctv-cameras" element={<CctvCameras />} />
+       
         <Route path="/products/smart-doorlocks" element={<SmartDoorlocks />} />
         <Route path="/products/all-sensors" element={<AllSensors />} />
   <Route path="/products/smart-switches" element={<SmartSwitches/>} />
+  <Route path="/products/Curtain-Automation" element={<CurtainAutomation/>} />
         {/* LIGHTING AUTOMATION */}
         <Route
           path="/products/lighting-automation"
@@ -111,11 +115,16 @@ function App() {
         <Route path="/products/audio-video" element={<AudioVideoSection />} />
 
         {/* RESOURCES */}
-        <Route path="/resources/blogs" element={<Blogs />} />
-        <Route path="/resources/case-studies" element={<CaseStudies />} />
+        {/* <Route path="/services/home-automation" element={<Blogs />} /> */}
+        {/* <Route path="/resources/case-studies" element={<CaseStudies />} />
         <Route path="/resources/manuals" element={<Manuals />} />
-        <Route path="/resources/accessories" element={<Accessories />} />
+        <Route path="/resources/accessories" element={<Accessories />} /> */}
+
         {/* SERVICES */}
+       
+      <Route path="/products/smart-doorlocks" element={<SmartDoorlocks />} />
+<Route path="/products/smart-doorlocks/all" element={<Doorlocks />} />
+
         <Route path="/services/home-automation" element={<HomeAutomation/>}></Route>
         <Route path="/services/office-automation" element={<OfficeAutamation />}> </Route>
 

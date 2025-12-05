@@ -10,6 +10,8 @@ import {
   Puzzle,
   Timer,
 } from "lucide-react";
+import ContactForm from "../components/sections/ContactForm";
+import Footer from "../components/layout/Footer";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -25,6 +27,11 @@ const features = [
   { title: "Seamless Integration", icon: <Puzzle size={26} className="text-orange-600" /> },
   { title: "Automation Saves Time", icon: <Timer size={26} className="text-orange-600" /> },
 ];
+const handleContactClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  e.preventDefault();
+  const el = document.getElementById("contact");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
 const HomeAutomation = () => {
   return (
@@ -87,9 +94,13 @@ const HomeAutomation = () => {
               app-based control.
             </p>
 
-            <button className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors">
-              Contact Us
-            </button>
+          <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors"
+>
+  Contact Us
+</button>
+
           </motion.div>
         </div>
       </section>
@@ -124,9 +135,13 @@ const HomeAutomation = () => {
                 <li>• Enhanced security</li>
               </ul>
 
-              <button className="mt-6 px-5 py-2 bg-black text-white rounded-lg hover:bg-orange-600 transition-colors">
-                Contact Us
-              </button>
+           <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors"
+>
+  Contact Us
+</button>
+
             </div>
 
             {/* Image Card */}
@@ -187,16 +202,21 @@ const HomeAutomation = () => {
           </div>
 
           <div className="flex gap-4">
-            <button className="px-6 py-3 bg-black text-white rounded-xl hover:bg-orange-600 transition-colors">
-              Contact Us
-            </button>
+       <button
+  onClick={handleContactClick}
+  className="px-6 py-3 inline-block bg-black text-white rounded-xl hover:bg-orange-600 transition-colors"
+>
+  Contact Us
+</button>
+
             <button className="px-6 py-3 border border-orange-300 text-orange-700 rounded-xl hover:bg-orange-50 transition-colors">
               Learn More
             </button>
           </div>
         </div>
       </section>
-
+<ContactForm/>
+<Footer/>
     </div>
   );
 };
