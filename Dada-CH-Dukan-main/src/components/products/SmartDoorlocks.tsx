@@ -57,7 +57,7 @@ const SmartDoorlocks: React.FC = () => {
       {/* HERO SECTION */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <video
-          src="/images/Gate/stock-footage-opening-automatic-property-gate-with-remote-controller.webm"
+          src=""
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           loop
@@ -108,17 +108,18 @@ const SmartDoorlocks: React.FC = () => {
         </div>
       </section>
 
-      {/* PRODUCT CARDS PREVIEW */}
+      {/* PRODUCT PREVIEW CARDS */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <h2 className="text-3xl md:text-5xl font-bold text-center">
           Featured Locks
         </h2>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-10 mt-16">
+        {/* FIXED GRID → always 3 cards aligned center */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center place-items-center">
           {products.slice(0, 3).map((p, i) => (
             <div
               key={i}
-              className="bg-[#111] rounded-3xl shadow-xl border border-orange-500/20 hover:border-orange-500/40 p-6 transition group"
+              className="bg-[#111] rounded-3xl shadow-xl border border-orange-500/20 hover:border-orange-500/40 p-6 transition group w-full max-w-[320px]"
             >
               <img
                 src={p.img}
@@ -133,7 +134,7 @@ const SmartDoorlocks: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-14">
+        <div className="text-center mt-16">
           <Link to="/products/smart-doorlocks/all">
             <button className="px-8 py-3 bg-orange-600 hover:bg-orange-700 transition rounded-xl font-semibold shadow-lg">
               Browse Full Catalog
