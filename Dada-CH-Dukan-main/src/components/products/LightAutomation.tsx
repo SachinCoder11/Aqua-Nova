@@ -68,7 +68,7 @@ const LightingAutomation: React.FC = () => {
 
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
             <img
-              src="/Public/images/new logo2.png"
+              src="/images/Outdoor/logofinal.png"
               alt="icon"
               className="w-16 mb-4 opacity-90"
             />

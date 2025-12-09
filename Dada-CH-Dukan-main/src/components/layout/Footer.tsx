@@ -6,10 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-black text-gray-300 pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* GRID */}
         <div className="grid md:grid-cols-4 gap-12">
-
           {/* BRAND */}
           <div>
             <img
@@ -44,8 +42,6 @@ const Footer = () => {
               <li>Security Automation</li>
               <li>HVAC / Entertainment</li>
               <li>Smart Way Control</li>
-              <li>Smart Node Application</li>
-              <li>Third-Party Integration</li>
             </ul>
           </div>
 
@@ -62,11 +58,11 @@ const Footer = () => {
 
           {/* CONTACT */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Contact Us
+            </h3>
 
             <ul className="space-y-4 text-sm">
-              
-
               <li className="flex items-center space-x-2">
                 <span>📧</span>
                 <span>info@smartlife.in</span>
@@ -78,14 +74,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
         </div>
 
         {/* BOTTOM BAR */}
         <div className="border-t border-gray-700 text-center pt-6 mt-12 text-sm">
           © {currentYear} Smart Life Solutions. All Rights Reserved.
         </div>
-
       </div>
     </footer>
   );
